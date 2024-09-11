@@ -36,8 +36,10 @@ class cisTopic:
         
             
         a,b,rep_c = torch.unique(self.atac[0,:],return_inverse =True,return_counts=True)
-        rep_c=rep_c.type(torch.LongTensor) 
+        rep_c=rep_c.type(torch.LongTensor)
+      
         cell_array = torch.arange(n_cells)
+     
         rep_c_ = torch.repeat_interleave(cell_array, rep_c, dim = 0)
         
 
@@ -207,7 +209,7 @@ class cisTopic:
         device = torch.device(dev)
         
         
-        n_cells = self.atac.shape[0]
+        n_cells = self.sc_data_atac.shape[0]
         l = torch.unique(self.atac[1,:])
         R = l.shape[0]
         self.alpha = torch.ones([1, self.n_topics])*self.alpha

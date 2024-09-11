@@ -1,0 +1,14 @@
+name: Cistopic
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - scanpy=1.9.8
+  - pytorch=2.1.2
+  - torch-scatter=2.1.1
+  - ca-certificates=2024.2.2
+  - certifi=2024.2.2
+  - openssl=3.2.1
+  - ipykernel=6.29.3
+
