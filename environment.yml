@@ -1,4 +1,4 @@
-name: Cistopic
+name: cisTopic
 channels:
   - conda-forge
   - bioconda
